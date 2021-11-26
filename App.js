@@ -1,21 +1,25 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, Text, View, TextInput, FlatList } from "react-native";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!!!!!!!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const [people, setPeople] = useState([
+    { name: "shaun", id: "1" },
+    { name: "yoshi", id: "2" },
+    { name: "mario", id: "3" },
+    { name: "luigi", id: "4" },
+    { name: "peach", id: "5" },
+    { name: "toad", id: "6" },
+    { name: "bowser", id: "7" },
+  ]);
+
+  return <View style={styles.container}></View>;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 40,
+    paddingHorizontal: 20,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
